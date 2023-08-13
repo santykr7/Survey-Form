@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./build/css/intlTelInput.css">
+    <!-- <link  href="./build/css/demo.css" rel="stylesheet"> -->
+
+    <title>Document</title>
+    
+
+</head>
+<body>
+    <div class="container">
+        <div class="logo-container">
+            <div id="logo1">
+                <img src="./man-logo.jpg" alt="">
+            </div>
+            
+        </div>
+        <div class="side2">
+        <img src="https://img.freepik.com/free-vector/butterfly-logo-colorful-gradient-illustrations_483537-972.jpg?w=740&t=st=1691833755~exp=1691834355~hmac=8933ada5a81b6e0284c7391be03436c291cf1195f49f8efd12f3855b6a826029" alt="" srcset="">
+            <h1>Get a Free</h1>
+            <h3>consultation with an Expert</h3>
+
+            <form action="thank-you.html" id="survey-form">
+              <input type="email" id="email" name="email" placeholder="Email Address" required>
+                    <input type="tel" id="mobile" name="mobile" placeholder="Mobile Number" required>
+                    
+                <input type="submit" id="talk-to-us" onclick="displayInput()"> 
+            </form>
+        </div>
+    </div>
+    <script src="./build/js/intlTelInput.js"></script>
+    <script>
+        var input = document.querySelector("#mobile");
+        window.intlTelInput(input,{});
+    </script>
+</body>
+</html>

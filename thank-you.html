@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        Thanks a ton for taking out your precious time and for completing the survey
+        <br>
+        <div class="emailRow">
+        <p>Email Address:</p><span id="inputted"></span>
+
+        </div>
+        
+        <div class="mobileRow">
+        <p>Mobile Number:</p><span id="mobNumber">Mobile Number: </span>
+
+        </div>
+            
+    
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        console.log({urlParams})
+const email = urlParams.get("email");
+const countryCode = urlParams.get("countryCode");
+console.log(countryCode);
+const mobile = urlParams.get("mobile");
+console.log(urlParams.get("mobile"))
+
+
+// Use the retrieved data as needed
+document.getElementById("inputted").textContent = email;
+document.getElementById(
+  "mobNumber"
+).textContent = mobile;
+
+    </script>
+</body>
+</html>

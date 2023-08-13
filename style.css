@@ -1,0 +1,95 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    font-size: 25px;
+    box-sizing: border-box;
+    max-width: 1600px;
+    max-height: 1500px;
+    background: rgb(248, 248, 248);
+    width: 100%;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    
+    background: #fff;
+    width: 100%;
+    max-width: 1200px;
+    margin: 100px auto 0;
+    border-radius: 10px;
+    padding: 30px; 
+}
+.side2 {
+    display: flex;
+    flex-direction: column;
+    margin-right: 150px;
+}
+
+#survey-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+    margin-bottom: 15px;
+
+}
+
+#survey-form #mobile {
+    height: 50px;
+    padding-left: 50px;
+    
+    /* margin-left: 10px; */
+}
+.iti__selected-flag {
+    margin: 0 20px;
+}
+
+form {
+    padding: 10px;
+}
+
+img {
+    height: 500px;
+}
+
+.side2 img {
+    width: 200px;
+    height: 100px;
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
+}
+
+#survey-form input {
+    width:400px;
+    padding-left: 7px;
+    border-radius: 2px;
+    border: #868686 solid 1px;
+    font-size: 18px;
+    margin-left: 20px;
+    
+}
+
+#survey-form #email{
+    width: 400px;
+    margin-bottom: 10px;
+    height: 50px;
+}
+
+#survey-form #talk-to-us {
+    margin-top: 30px;
+    color: #fff;
+    background: black;
+    border-radius: 4px;
+    
+    height: 50px
+}
+.side2 img {
+    width: 100px;
+}
