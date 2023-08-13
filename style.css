@@ -6,6 +6,7 @@
 }
 
 body {
+    text-align: center;
     font-size: 25px;
     box-sizing: border-box;
     max-width: 1600px;
@@ -15,8 +16,7 @@ body {
 }
 .container {
     display: flex;
-    justify-content: space-between;
-    
+    justify-content: space-between; 
     background: #fff;
     width: 100%;
     max-width: 1200px;
@@ -35,7 +35,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 80px;
+    margin-top: 30px;
     margin-bottom: 15px;
 
 }
@@ -75,14 +75,29 @@ img {
     margin-left: 20px;
     
 }
+.input-group p {
+    position: relative;
+    font-size: 15px;
+    margin-bottom: 10px;
+    margin-right: 250px;
+    color: red;
+    visibility: hidden;
+    
+}
+.error p {
+    visibility: visible;
+    
+}
 
 #survey-form #email{
     width: 400px;
-    margin-bottom: 10px;
+    
     height: 50px;
 }
 
 #survey-form #talk-to-us {
+    width: 400px;
+    margin-left: 16px;
     margin-top: 30px;
     color: #fff;
     background: black;
@@ -90,6 +105,35 @@ img {
     
     height: 50px
 }
+
 .side2 img {
     width: 100px;
 }
+
+
+@media (max-width: 600px) {
+.container {
+    flex-direction: column;
+    margin-top: 50px;
+    padding: 15px;
+}
+
+.side2 {
+    margin-right: 0;
+}
+
+#survey-form  {
+    width: 100%;
+    margin: 5px 0;
+}
+
+#survey-form #talk-to-us {
+    width: 100%;
+}
+}
+
+
+
+
+
+

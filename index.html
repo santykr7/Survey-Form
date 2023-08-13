@@ -21,15 +21,18 @@
             
         </div>
         <div class="side2">
+            <p>Logo</p>
         <img src="https://img.freepik.com/free-vector/butterfly-logo-colorful-gradient-illustrations_483537-972.jpg?w=740&t=st=1691833755~exp=1691834355~hmac=8933ada5a81b6e0284c7391be03436c291cf1195f49f8efd12f3855b6a826029" alt="" srcset="">
             <h1>Get a Free</h1>
             <h3>consultation with an Expert</h3>
 
-            <form action="thank-you.html" id="survey-form">
-              <input type="email" id="email" name="email" placeholder="Email Address" required>
-                    <input type="tel" id="mobile" name="mobile" placeholder="Mobile Number" required>
+            <form action="thank-you.html" class="input-group" id="survey-form">
+              <input type="email" id="email" name="email" placeholder="Email Address" required >
+              <p>Error Message!!!!!!!</p>      
+              <input type="tel" id="mobile" class="input-group"  name="mobile" placeholder="Mobile Number" required>
+              <p>Error Message!!!!!!!</p>
                     
-                <input type="submit" id="talk-to-us" onclick="displayInput()"> 
+                <button type="submit" name="oldName" id="talk-to-us" style="font-size: 22px;"> Talk to Us
             </form>
         </div>
     </div>
@@ -37,6 +40,31 @@
     <script>
         var input = document.querySelector("#mobile");
         window.intlTelInput(input,{});
+    </script>
+    <script>
+        const form = document.querySelector("#survey-form");
+        const emailInput = document.querySelector("#email");
+        const mobileInput = document.querySelector("#mobile");
+
+        form.addEventListener('submit',(e) => {
+            e.preventDefault();
+
+            validateForm();
+        })
+
+        function validateForm() {
+            if(mobileInput.value.trim() == ''){  
+                setError(mobileInput, 'email not empty')
+
+            }
+        }
+
+        function setError(ele, errorMsg) {
+            const parent = ele.parentElement;
+            parent.classList.add('error');
+            const paragraph = parent.querySelector('p');
+            paragraph.textContent = errorMsg;
+        }
     </script>
 </body>
 </html>
